@@ -1,0 +1,576 @@
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.l-header {
+    background: #222;
+    height: 20vh;
+}
+.l-content {
+    background: #333;
+    height: 60vh;
+}
+.l-footer {
+    background: #444;
+    height: 20vh;
+}
+.sea {
+    --wave-color: rgba(14, 58, 87, 1.0);
+    --horizon-color: rgb(10, 75, 92);
+    background: linear-gradient(var(--wave-color), var(--horizon-color) 50%);
+    cursor: none;
+    
+}
+
+.sea .wave-bottom {
+    
+    /*border: 1px solid red;*/
+    height: 100px;
+
+    background-image: radial-gradient(transparent 44%, var(--wave-color) 45%),
+    linear-gradient(var(--wave-color), var(--wave-color));
+    background-position: 0 -35px, 0 35px;
+    background-size: 100px 75px;
+    background-repeat: repeat-x;
+}
+.sea .wave {
+    
+   position: absolute;
+   width: 100%;
+   bottom:0;
+
+}
+.sea .wave::before {
+    
+    content: "";
+    display: block;
+    /*border: 1px solid green;*/
+
+    height: 100px;
+
+    background-image: radial-gradient(var(--wave-color) 49%, transparent  50%);
+    background-position: 50px 40px;
+    background-size: 100px 300px;
+    background-repeat: repeat-x;
+
+    transform: translateY(0px);
+}
+.sea .wave::after {
+    
+    content: "";
+    display: block;
+    height: 100px;
+    /*border: 1px solid green;*/
+    background-image: radial-gradient(transparent 44%, var(--wave-color) 45%),
+    linear-gradient(var(--wave-color), var(--wave-color));
+    background-position: 0 -35px, 0 35px;
+    background-size: 100px 75px;
+    background-repeat: repeat-x;
+
+}
+
+
+
+/*TORPEDO STYLE */
+.center {
+    /* absolute center*/
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+
+}
+
+
+.sea .torpedo {
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+    /*border: 1px solid green;*/
+    
+    transform: scale(.5);
+    bottom: 20px;
+
+    
+    
+}
+.sea .torpedo .head {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    border-radius: 100%;
+}
+
+.sea .torpedo .body {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #555;
+    border-radius: 100%;
+}
+.sea .torpedo .tail {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #999;
+    border-radius: 100%;
+}
+
+.sea .torpedo .tail-v {
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    background-color: #666;
+
+}
+.sea .torpedo .tail-h {
+    position: absolute; 
+    width: 100px;
+    height: 10px;
+    background-color: #666;
+
+}
+
+.sea .torpedo.reverse .head {
+z-index: 2;
+width: 40px;
+height: 40px;
+
+}
+.sea .torpedo.reverse .body{
+    z-index: 1;
+    width: 55px;
+    height: 55px;
+
+    
+    }
+.sea .torpedo.reverse .tail {
+    z-index: 0;
+    
+    width: 60px;
+    height: 60px;
+    
+    }
+
+.sea .torpedo.reverse .tail-h {
+        z-index: 1;
+
+    }
+.sea .torpedo.reverse .tail-v {
+        z-index: 1;
+
+    }
+
+
+    /*STYLE SHIP*/
+
+.sea .ship {
+    width: 300px;
+    height: 200px;
+    /*border: 1px solid green;*/
+    padding-left: 50px;
+    position: absolute;
+    bottom: 20px;
+    transform: scale(.4);
+    left: 200px;
+
+}
+.sea .ship .main {
+    width: 300px;
+    height: 50px;
+   /* border: 1px solid red;*/
+    background-color: red;
+    transform: translateY(150px);
+    position: relative;
+   
+
+}
+
+.main::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: inherit;
+    position: absolute;
+    /*border: 1px solid red;*/
+    left: 0px;
+    background-image: radial-gradient(at 5% 180%, #333 20px, red 30%);
+
+}
+.main::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: inherit;
+    position: absolute;
+    /*border: 1px solid red;*/
+    right: 0px;
+    background-image: radial-gradient(at 4% -180%, red 20px, #333 30%);
+
+}
+
+.sea .ship .middle {
+    width: 300px;
+    height: 40px;
+    /*border: 1px solid red;*/
+    background-color: #666;
+    transform: translateY(60px);
+    
+}
+
+.middle::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: inherit;
+    position: absolute;
+    /*border: 1px solid red;*/
+    left: -13px;
+    background-image: radial-gradient(at 5% 180%, #333 20px, #666 30%);
+}
+.middle::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: inherit;
+    position: absolute;
+    /*border: 1px solid red;*/
+    right: -8px;
+    background-image: radial-gradient(at 4%  -180%, #666 20px, #333 30%);
+
+}
+
+
+.sea .ship .top {
+    width: 200px;
+    height: 30px;
+    /*border: 1px solid red;*/
+    background-color: #999;
+    transform: translateY(-14px);
+    display: block;
+    margin: auto;
+    
+}
+.top::after {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 10px;
+    background-color: #999;
+    position: absolute;
+    right: -10px;
+    transform-origin: right bottom;
+    transform: skew(15deg);
+}
+.top::before {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 10px;
+    background-color: #999;
+    position: absolute;
+    left: -10px;
+    transform-origin: left bottom;
+    transform: skew(-15deg);
+}
+.sea .ship .top-1 {
+    width: 130px;
+    height: 20px;
+    /*border: 1px solid red;*/
+    background-color: #666;
+    transform: translateY(-65px);
+    display: block;
+    margin: auto;
+    
+}
+.top-1::after {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 8px;
+    background-color: #666;
+    position: absolute;
+    right: -10px;
+    transform-origin: right bottom;
+    transform: skew(15deg);
+}
+.top-1::before {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 8px;
+    background-color: #666;
+    position: absolute;
+    left: -10px;
+    transform-origin: left bottom;
+    transform: skew(-15deg);
+}
+.sea .ship .top-2 {
+    width: 80px;
+    height: 10px;
+    /*border: 1px solid red;*/
+    background-color: #999;
+    transform: translateY(-95px);
+    display: block;
+    margin: auto;
+    
+}
+.top-2::after {
+    content: "";
+    display: block;
+    height: inherit;
+    width: 6px;
+    background-color: #999;
+    position: absolute;
+    right: -5px;
+    transform-origin: right bottom;
+    transform: skew(15deg);
+}
+.sea .ship .mast {
+    width: 3px;
+    height: 50px;
+    /*border: 1px solid red;*/
+    background-color: black;
+    transform: translateY(-158px);
+    display: block;
+    margin: auto;
+
+}
+.sea .ship .mast-1 {
+    width: 30px;
+    height: 15px;
+    /*border: 1px solid red;*/
+    background-color: black;
+    transform: translateY(0px);
+}
+
+.mast-1::after {
+content: "☠️";
+font-size: 12px;
+display: block;
+text-align: center;
+}
+
+/* SCOPE*/
+
+.scope {
+    --scope-color: rgba(22, 170, 22, 0.533);
+    width: 200px;
+    height: 200px;
+    border: 2px solid var(--scope-color);
+    border-radius: 100%;
+    color: var(--scope-color);
+    font-size: 40px;
+    position: absolute;
+    bottom: 10px;
+    z-index: 1000;
+    cursor: none;
+
+}
+.scope .mid {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+   
+    text-align: center;
+    line-height: 200px;  
+}
+.scope .h {
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    
+
+    line-height: 190px;  
+    letter-spacing: 174px;
+}
+.scope .v {
+    width: 200px;
+    height: 400px;
+    position: absolute;
+    
+
+    line-height: 210px;  
+    letter-spacing: 174px;
+    writing-mode: vertical-lr;
+}
+
+
+/*Explosion  Grid container*/
+
+.explosion {
+    width: 300px;
+    height: 300px;
+    border: 1px dotted #777;
+
+    display: grid;
+    grid: 1fr 1fr 1fr / 1fr 1fr 1fr;
+
+    position: absolute;
+    bottom: 20px;
+    transform: scale(.4);
+    left: 200px;
+
+}
+
+/*grid item*/
+
+.fire-bottom-sm {
+    /*border: 1px solid yellow;*/
+    grid-column-start: 2;
+    grid-row-start: 3;
+    
+    background-image: radial-gradient(rgb(235, 235, 133), transparent 60%);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    z-index: 1;
+
+    animation: fire-sm .5s linear;
+    animation-fill-mode: forwards;
+    background-position-x: center;
+
+}
+
+.fire-bottom-md {
+    /*border: 1px solid yellow;*/
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-position: 0px 75px;
+    background-repeat: no-repeat;
+    background-image: radial-gradient(rgb(233, 155, 53), transparent 70%);
+
+    animation: fire-md 2s linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    background-position-x: center;
+    opacity: 0;
+
+}
+
+
+@keyframes fire-sm {
+    0% {
+        background-image: radial-gradient(rgb(238, 238, 195), transparent 60%);
+        background-position-y: 100px;
+        background-size: 0 0;
+        opacity: 0;
+    }
+    50% {
+        background-image: radial-gradient(rgb(238, 238, 195), transparent 60%);
+        background-position-y: 0px;
+        background-size: 100% 100%;
+        opacity: 1;
+    }
+    100% {
+        background-image: radial-gradient(rgb(233, 155, 53), transparent 60%); 
+        background-position-y: 20px;
+        background-size: 0 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fire-md {
+    0% {
+        
+        background-position-y: 200px;
+        background-size: 0 0;
+        opacity: 0;
+    }
+    15% {
+        
+        background-position-y: 0px;
+        background-size: 100% 100%;
+        opacity: 1;
+    }
+    100% {
+        
+        background-position-y: 250px;
+        background-size: 150% 200%;
+        opacity: 0;
+    }
+}
+
+
+
+
+/*RADAR*/
+
+.radar {
+    --radar-color: rgba(17, 128, 17, 0.533);
+    background-color: rgb(22, 17, 17);
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 1px solid var(--radar-color);
+    border-radius: 100%;
+    
+    background-image: 
+    repeating-radial-gradient(rgba(47, 161, 32, 0) 0% 8%,#0a992e 10% 10% ),
+    linear-gradient(45deg, transparent 49%, var(--radar-color) 1%, transparent 50%),
+    linear-gradient(90deg, transparent 49%, var(--radar-color) 1%, transparent 50%),
+    linear-gradient(135deg, transparent 49%, var(--radar-color) 1%, transparent 50%),
+    linear-gradient(180deg, transparent 49%, var(--radar-color) 1%, transparent 50%);
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+    
+}
+
+.signal {
+position: absolute;
+left: 50%;
+top:50%;
+width: 50%;
+height: 50%;
+transform: translateY(-100%);
+border-bottom: 2px solid var(--radar-color);
+background: linear-gradient(325deg, rgb(3, 109, 3), transparent, transparent);
+
+animation: radarAnim 5s linear infinite;
+
+transform-origin: left bottom;
+
+}
+
+
+
+@keyframes radarAnim{
+    from {
+        
+       transform: translateY(-100%) rotate(0deg);
+    }
+    to {
+        
+        transform: translateY(-100%) rotate(360deg);
+    }
+
+}
+
+.sea {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    perspective: 500px;
+    perspective-origin: center top;
+}
+
+
+
+
+
+
+
+
+

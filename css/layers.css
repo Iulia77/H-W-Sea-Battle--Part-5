@@ -1,0 +1,158 @@
+.sea .layer {
+  /*background-color: #999;*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -50%;
+  right: -50%;
+}
+
+.sea .layer:nth-child(1) {
+  z-index: 10;
+  -webkit-transform: translateZ(0px);
+          transform: translateZ(0px);
+  -webkit-filter: brightness(100%) blur(0px);
+          filter: brightness(100%) blur(0px);
+  -webkit-animation: wave 10s infinite;
+          animation: wave 10s infinite;
+  -webkit-animation-delay: 8.4856562299s;
+          animation-delay: 8.4856562299s;
+}
+
+.sea .layer:nth-child(2) {
+  z-index: 9;
+  -webkit-transform: translateZ(-50px);
+          transform: translateZ(-50px);
+  -webkit-filter: brightness(95%) blur(0.5px);
+          filter: brightness(95%) blur(0.5px);
+  -webkit-animation: wave 11s infinite;
+          animation: wave 11s infinite;
+  -webkit-animation-delay: 3.3458802925s;
+          animation-delay: 3.3458802925s;
+}
+
+.sea .layer:nth-child(3) {
+  z-index: 8;
+  -webkit-transform: translateZ(-100px);
+          transform: translateZ(-100px);
+  -webkit-filter: brightness(90%) blur(1px);
+          filter: brightness(90%) blur(1px);
+  -webkit-animation: wave 12s infinite;
+          animation: wave 12s infinite;
+  -webkit-animation-delay: 8.8794316649s;
+          animation-delay: 8.8794316649s;
+}
+
+.sea .layer:nth-child(4) {
+  z-index: 7;
+  -webkit-transform: translateZ(-150px);
+          transform: translateZ(-150px);
+  -webkit-filter: brightness(85%) blur(1.5px);
+          filter: brightness(85%) blur(1.5px);
+  -webkit-animation: wave 13s infinite;
+          animation: wave 13s infinite;
+  -webkit-animation-delay: 9.5820201811s;
+          animation-delay: 9.5820201811s;
+}
+
+.sea .layer:nth-child(5) {
+  z-index: 6;
+  -webkit-transform: translateZ(-200px);
+          transform: translateZ(-200px);
+  -webkit-filter: brightness(80%) blur(2px);
+          filter: brightness(80%) blur(2px);
+  -webkit-animation: wave 14s infinite;
+          animation: wave 14s infinite;
+  -webkit-animation-delay: 6.2889720721s;
+          animation-delay: 6.2889720721s;
+}
+
+.sea .layer:nth-child(6) {
+  z-index: 5;
+  -webkit-transform: translateZ(-250px);
+          transform: translateZ(-250px);
+  -webkit-filter: brightness(75%) blur(2.5px);
+          filter: brightness(75%) blur(2.5px);
+  -webkit-animation: wave 15s infinite;
+          animation: wave 15s infinite;
+  -webkit-animation-delay: 9.4324339874s;
+          animation-delay: 9.4324339874s;
+}
+
+.sea .layer:nth-child(7) {
+  z-index: 4;
+  -webkit-transform: translateZ(-300px);
+          transform: translateZ(-300px);
+  -webkit-filter: brightness(70%) blur(3px);
+          filter: brightness(70%) blur(3px);
+  -webkit-animation: wave 16s infinite;
+          animation: wave 16s infinite;
+  -webkit-animation-delay: 0.6040670091s;
+          animation-delay: 0.6040670091s;
+}
+
+.sea .layer:nth-child(8) {
+  z-index: 3;
+  -webkit-transform: translateZ(-350px);
+          transform: translateZ(-350px);
+  -webkit-filter: brightness(65%) blur(3.5px);
+          filter: brightness(65%) blur(3.5px);
+  -webkit-animation: wave 17s infinite;
+          animation: wave 17s infinite;
+  -webkit-animation-delay: 0.8696625484s;
+          animation-delay: 0.8696625484s;
+}
+
+.sea .layer:nth-child(9) {
+  z-index: 2;
+  -webkit-transform: translateZ(-400px);
+          transform: translateZ(-400px);
+  -webkit-filter: brightness(60%) blur(4px);
+          filter: brightness(60%) blur(4px);
+  -webkit-animation: wave 18s infinite;
+          animation: wave 18s infinite;
+  -webkit-animation-delay: 9.4799189632s;
+          animation-delay: 9.4799189632s;
+}
+
+.sea .layer:nth-child(10) {
+  z-index: 1;
+  -webkit-transform: translateZ(-450px);
+          transform: translateZ(-450px);
+  -webkit-filter: brightness(55%) blur(4.5px);
+          filter: brightness(55%) blur(4.5px);
+  -webkit-animation: wave 19s infinite;
+          animation: wave 19s infinite;
+  -webkit-animation-delay: 1.7238777408s;
+          animation-delay: 1.7238777408s;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    left: -50%;
+  }
+  33% {
+    left: -45%;
+  }
+  66% {
+    left: -55%;
+  }
+  100% {
+    left: -50%;
+  }
+}
+
+@keyframes wave {
+  0% {
+    left: -50%;
+  }
+  33% {
+    left: -45%;
+  }
+  66% {
+    left: -55%;
+  }
+  100% {
+    left: -50%;
+  }
+}/*# sourceMappingURL=layers.css.map */
